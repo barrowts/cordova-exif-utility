@@ -15,10 +15,4 @@
         <source-file src="src/ios/CDVExifUtility.m" />
     </platform>
     
-    <platform name="android">
-        <config-file parent="/*" target="res/xml/config.xml">
-            <feature name="ExifUtility"><param name="android-package" value="org.ronin.exifutility.ExifUtility" /></feature></config-file><config-file parent="/*" target="AndroidManifest.xml">
-        </config-file><source-file src="src/android/ExifUtility.java" target-dir="src/org/ronin/exifutility/ExifUtility" />
-    </platform>
-
 </plugin>
