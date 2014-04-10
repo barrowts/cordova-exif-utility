@@ -2,7 +2,7 @@
 <plugin id="org.ronin.exifutility" version="0.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
     <name>ExifUtility</name>
 
-    <js-module name="ExifUtility" src="www/ExifUtility.js">
+    <js-module name="ExifUtility" src="www/exifutil.js">
         <clobbers target="cordova.plugins.ExifUtility" />
     </js-module>
 
@@ -12,7 +12,8 @@
                 <param name="ios-package" value="CDVExifUtility" />
             </feature>
         </config-file>
-        <source-file src="src/ios/CDVExifUtility.m" />
+        <header-file src="src/ios/exifutil.h" />
+        <source-file src="src/ios/exifutil.m" />
     </platform>
     
 </plugin>
