@@ -9,11 +9,11 @@
     <platform name="ios">
         <config-file parent="/*" target="config.xml">
             <feature name="ExifUtility">
-                <param name="ios-package" value="CDVExifUtility" />
+                <param name="ios-package" value="ExifUtility" />
             </feature>
         </config-file>
-        <header-file src="src/ios/exifutil.h" />
-        <source-file src="src/ios/exifutil.m" />
+        <header-file src="src/ios/ExifUtility.h" />
+        <source-file src="src/ios/ExifUtility.m" />
     </platform>
     
 </plugin>

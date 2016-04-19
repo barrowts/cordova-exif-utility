@@ -27,7 +27,7 @@ var exec = require('cordova/exec');
  *   Access a jpeg image exif header data from javascript
  *
  */
-var ExifUtil = {
+var ExifUtility = {
     /**
      * getExifData
      *   returns contents of exif header block of a jpeg image as a json formatted data string
@@ -36,7 +36,7 @@ var ExifUtil = {
     getExifData: function(filepath, success, fail) {
         exec(success, 
              fail,
-             "ExifUtil",
+             "ExifUtility",
              "getExifData",
              [filepath,"exif"]);
     },
@@ -45,11 +45,11 @@ var ExifUtil = {
      *   returns contents of the tiff header block of a jpeg image as a json formatted data string
      */
     getTiffData: function(filepath, success, fail) {
-        return exec(success,
-                            fail,
-                            "ExifUtil",
-                            "getTiffData",
-                            [filepath, "tiff"]);
+        exec(success,
+             fail,
+             "ExifUtility",
+             "getTiffData",
+             [filepath, "tiff"]);
     },
 
     /**
@@ -57,26 +57,26 @@ var ExifUtil = {
      *   strips all exif data from the image header of a jpeg image
      */
     stripExifData: function(filepath, success, fail) {
-        return exec(success,
-                            fail,
-                            "ExifUtil",
-                            "stripTiffData",
-                            [filepath]); 
+        exec(success,
+             fail,
+             "ExifUtility",
+             "stripTiffData",
+             [filepath]); 
     },
 
     /**
      * strips the exif geolocation subifd from the exif header data of a jpeg image
      */
     stripGeoData: function(filepath, success, fail) {
-        return exec(success,
-                            fail,
-                            "ExifUtil",
-                            "stripGeoData",
-                            [filepath]);
+        exec(success,
+             fail,
+             "ExifUtility",
+             "stripGeoData",
+             [filepath]);
     }
     
 };
 
 
 
-module.exports = ExifUtil;
+module.exports = ExifUtility;
